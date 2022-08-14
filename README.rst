@@ -23,3 +23,16 @@ source can be built in different build roots (Fedora, CentOS, etc.)
 .. _template: https://gitlab.com/cki-project/kernel-ark/-/blob/os-build/redhat/kernel.spec.template
 .. _documentation: https://gitlab.com/cki-project/kernel-ark/-/wikis/home
 .. _online: https://gitlab.com/cki-project/kernel-ark/-/commits/ark-patches
+
+ngxson changes
+########
+
+- Add `CONFIG_WQ_POWER_EFFICIENT_DEFAULT`: lower power consumption by `tick_sched_timer`
+- Add `CONFIG_CPU_FREQ_STAT`: needed by `powertop`
+
+ngxson build
+########
+
+0. (Optionally) mount external drive to `/var/lib/mock`, see nui.sh
+1. `fedpkg mockbuild`
+2. Go to `results_kernel`, install `kernel`, `kernel-core` and `kernel-modules`
