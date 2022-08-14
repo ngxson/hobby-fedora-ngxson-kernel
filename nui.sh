@@ -1,0 +1,1 @@
+sudo mount --bind /run/media/ngxson/Epiphyllum/mock /var/lib/mock

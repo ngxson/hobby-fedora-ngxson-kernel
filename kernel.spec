@@ -121,7 +121,7 @@ Summary: The Linux kernel
 #  to build the base kernel using the debug configuration. (Specifying
 #  the --with-release option overrides this setting.)
 %define debugbuildsenabled 1
-# define buildid .local
+%define buildid .ngxson
 %define specversion 5.18.17
 %define patchversion 5.18
 %define pkgrelease 200
