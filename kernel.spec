@@ -122,17 +122,17 @@ Summary: The Linux kernel
 #  the --with-release option overrides this setting.)
 %define debugbuildsenabled 1
 %define buildid .ngxson
-%define specversion 5.19.4
+%define specversion 5.19.14
 %define patchversion 5.19
 %define pkgrelease 200
 %define kversion 5
-%define tarfile_release 5.19.4
+%define tarfile_release 5.19.14
 # This is needed to do merge window version magic
 %define patchlevel 19
 # This allows pkg_release to have configurable %%{?dist} tag
 %define specrelease 200%{?buildid}%{?dist}
 # This defines the kabi tarball version
-%define kabiversion 5.19.4
+%define kabiversion 5.19.14
 
 #
 # End of genspec.sh variables
@@ -3138,6 +3138,40 @@ fi
 #
 #
 %changelog
+* Wed Oct 05 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.14-0]
+- Linux v5.19.14
+
+* Tue Oct 04 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.13-0]
+- Linux v5.19.13
+
+* Wed Sep 28 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.12-0]
+- Linux v5.19.12
+
+* Fri Sep 23 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.11-0]
+- Linux v5.19.11
+
+* Tue Sep 20 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.10-0]
+- kbuild: Add skip_encoding_btf_enum64 option to pahole (Martin Rodriguez Reboredo)
+- Linux v5.19.10
+
+* Thu Sep 15 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.9-0]
+- Add CONFIG_ARM64_ERRATUM_2457168 as new stable config option (Justin M. Forbes)
+- fedora: disable IWLMEI (Peter Robinson)
+- [PATCH] drm/i915: Ensure damage clip area is within pipe area (Mark Pearson)
+- [PATCH] drm/i915/psr: Use full update In case of area calculation fails (Mark Pearson)
+- Config update for stable ARM64_ERRATUM_2441009 (Justin M. Forbes)
+- Linux v5.19.9
+
+* Thu Sep 08 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.8-0]
+- [PATCH] drm/i915/bios: Use hardcoded fp_timing size for generating  LFP data pointers (Mark Pearson)
+- Linux v5.19.8
+
+* Wed Aug 31 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.6-0]
+- Revert "block: freeze the queue earlier in del_gendisk" (Justin M. Forbes)
+- redhat/configs: aarch64: Turn on Apple Silicon configs for Fedora (Eric Curtin)
+- redhat/Makefile: Always set UPSTREAM (Prarit Bhargava)
+- Linux v5.19.6
+
 * Thu Aug 25 2022 Justin M. Forbes <jforbes@fedoraproject.org> [5.19.4-0]
 - Linux v5.19.4
 
